@@ -1,7 +1,8 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 
-export default function ContactList() {
+export default function ContactList(props) {
+   const { input } = props;
    const [contacts, setContacts] = useState([]);
 
    const fetchData = () => {
@@ -22,9 +23,18 @@ export default function ContactList() {
 
    return (
       <div>
-         {contacts.map((items) => {
-            return <div>{items.name}</div>;
-         })}
+         {contacts
+            .filter((contact) => {
+               return (
+                  contact.name
+                     .toString()
+                     .toLowerCase()
+                     .indexOf(input.toString().toLowerCase()) > -1
+               );
+            })
+            .map((items) => {
+               return <li key={items.id}>{items.name}</li>;
+            })}
       </div>
    );
 }
