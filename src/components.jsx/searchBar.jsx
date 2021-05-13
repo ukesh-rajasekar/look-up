@@ -5,7 +5,6 @@ export default function SearchBar(props) {
    const { keyword, setKeyword } = props;
    return (
       <Navbar bg='light' expand='lg'>
-         <Navbar.Toggle aria-controls='basic-navbar-nav' />
          <FormControl
             type='text'
             placeholder='Search contacts'
