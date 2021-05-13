@@ -1,5 +1,21 @@
-App {
+body {
    width: 100%;
    height: 100%;
    background-color: whitesmoke;
+}
+
+.letter-icon {
+   width: 50px;
+   height: 50px;
+}
+
+#bootstrap-overrides {
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+}
+
+.name {
+   margin-left: 3em;
+   cursor: pointer;
 }

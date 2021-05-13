@@ -1,14 +1,18 @@
 import React from 'react';
+import { Navbar, FormControl } from 'react-bootstrap';
 
 export default function SearchBar(props) {
    const { keyword, setKeyword } = props;
    return (
-      <div>
-         <input
+      <Navbar bg='light' expand='lg'>
+         <Navbar.Toggle aria-controls='basic-navbar-nav' />
+         <FormControl
+            type='text'
+            placeholder='Search contacts'
             value={keyword}
-            placeholder={'search contacts'}
             onChange={(e) => setKeyword(e.target.value)}
+            className='mr-sm-2'
          />
-      </div>
+      </Navbar>
    );
 }
