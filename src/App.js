@@ -16,10 +16,9 @@ function App() {
             <Switch>
                <Route exact path='/'>
                   <SearchBar keyword={input} setKeyword={setInput} />
-
                   <ContactList input={input} ifClicked={setSelectedContact} />
                </Route>
-               <Route exact path='/:profile'>
+               <Route exact path='/contactlists'>
                   <ContactDetails selectedContact={selectedContact} />
                </Route>
             </Switch>

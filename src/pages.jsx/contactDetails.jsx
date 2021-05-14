@@ -16,17 +16,20 @@ export default function ContactDetails(props) {
                      <ListGroup variant='flush'>
                         <ListGroup.Item>
                            <h5>Email</h5>
-                           {email}
+                           <a href={'mailto:' + email}>{email}</a>
                         </ListGroup.Item>
 
                         <ListGroup.Item>
                            <h5>Call Mobile</h5>
-                           {phone}
+                           <a href={'tel:' + phone}>{phone}</a>
                         </ListGroup.Item>
 
                         <ListGroup.Item>
-                           <h5>Website</h5>
-                           {website}
+                           <h5>Go to site</h5>
+
+                           <a href={'https://' + website} target='_blank'>
+                              <h5>{website}</h5>
+                           </a>
                         </ListGroup.Item>
                      </ListGroup>
                   </Card.Body>

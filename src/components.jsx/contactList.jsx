@@ -35,7 +35,7 @@ export default function ContactList(props) {
 
    const handleRouting = (contactData) => {
       ifClicked(contactData);
-      history.push(`/${contactData.name}`);
+      history.push(`/contactlists`);
    };
 
    return (
