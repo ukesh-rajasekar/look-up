@@ -17,7 +17,10 @@ function App() {
             <Card className='main-card' bg={'dark'}>
                <Router>
                   <Switch>
-                     <Route exact path='/'>
+                     <Route
+                        exact
+                        path='https://ukesh-rajasekar.github.io/look-up/'
+                     >
                         <Card.Header>
                            <SearchBar keyword={input} setKeyword={setInput} />{' '}
                         </Card.Header>
@@ -26,7 +29,10 @@ function App() {
                            ifClicked={setSelectedContact}
                         />
                      </Route>
-                     <Route exact path='/contactlists'>
+                     <Route
+                        exact
+                        path='https://ukesh-rajasekar.github.io/look-up/contactlists'
+                     >
                         <ContactDetails selectedContact={selectedContact} />
                      </Route>
                   </Switch>
