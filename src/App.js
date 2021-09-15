@@ -18,10 +18,7 @@ function App() {
                <h1>hello</h1>
                <Router>
                   <Switch>
-                     <Route
-                        exact
-                        path='https://ukesh-rajasekar.github.io/look-up/'
-                     >
+                     <Route exact path='/'>
                         <Card.Header>
                            <SearchBar keyword={input} setKeyword={setInput} />{' '}
                         </Card.Header>
@@ -30,10 +27,7 @@ function App() {
                            ifClicked={setSelectedContact}
                         />
                      </Route>
-                     <Route
-                        exact
-                        path='https://ukesh-rajasekar.github.io/look-up/contactlists'
-                     >
+                     <Route exact path='/contactlists'>
                         <ContactDetails selectedContact={selectedContact} />
                      </Route>
                   </Switch>
