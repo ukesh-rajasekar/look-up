@@ -15,8 +15,6 @@ function App() {
       <div className='App'>
          <div className='wrapper'>
             <Card className='main-card' bg={'dark'}>
-               <h1>hello</h1>
-
                <Router>
                   <Switch>
                      <Route exact path={process.env.PUBLIC_URL + '/'}>
