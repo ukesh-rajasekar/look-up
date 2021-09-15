@@ -16,9 +16,10 @@ function App() {
          <div className='wrapper'>
             <Card className='main-card' bg={'dark'}>
                <h1>hello</h1>
+
                <Router>
                   <Switch>
-                     <Route exact path='/'>
+                     <Route exact path={process.env.PUBLIC_URL + '/'}>
                         <Card.Header>
                            <SearchBar keyword={input} setKeyword={setInput} />{' '}
                         </Card.Header>
