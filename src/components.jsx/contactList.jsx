@@ -1,7 +1,8 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { useHistory } from 'react-router';
-import { Card, Row, Container, Col, ListGroup, Image } from 'react-bootstrap';
+import Avatar from 'react-avatar';
+import { Row, Container, Col, ListGroup, Image } from 'react-bootstrap';
 
 export default function ContactList(props) {
    const { input, ifClicked } = props;
@@ -42,39 +43,38 @@ export default function ContactList(props) {
       <Container fluid='md'>
          <Row className='justify-content-md-center'>
             <Col>
-               <Card className=' text-center' bg={'light'}>
-                  <Card.Body className='container'>
-                     <Card.Header>Contacts</Card.Header>
-                     <ListGroup variant='flush'>
-                        {contacts
-                           .filter((contact) => {
-                              return (
-                                 contact.name
-                                    .toString()
-                                    .toLowerCase()
-                                    .indexOf(input.toString().toLowerCase()) >
-                                 -1
-                              );
-                           })
-                           .map((items) => {
-                              return (
-                                 <ListGroup.Item
-                                    id='bootstrap-overrides'
-                                    key={items.id}
-                                    onClick={() => handleRouting(items)}
-                                 >
-                                    <Image
-                                       className='letter-icon'
-                                       src={'/images/' + items.name[0] + '.png'}
-                                       rounded
-                                    />
-                                    <h3 className='name'>{items.name}</h3>
-                                 </ListGroup.Item>
-                              );
-                           })}
-                     </ListGroup>
-                  </Card.Body>
-               </Card>
+               {/* <Card className=' text-center' bg={'dark'}>
+                  <Card.Body className='container'> */}
+               <ListGroup variant='flush'>
+                  {contacts
+                     .filter((contact) => {
+                        return (
+                           contact.name
+                              .toString()
+                              .toLowerCase()
+                              .indexOf(input.toString().toLowerCase()) > -1
+                        );
+                     })
+                     .map((items) => {
+                        return (
+                           <ListGroup.Item
+                              id='bootstrap-overrides'
+                              key={items.id}
+                              onClick={() => handleRouting(items)}
+                           >
+                              <Avatar
+                                 className='avatar'
+                                 name={items.name}
+                                 round={true}
+                                 size='70'
+                              />
+                              <h3 className='name'>{items.name}</h3>
+                           </ListGroup.Item>
+                        );
+                     })}
+               </ListGroup>
+               {/* </Card.Body>
+               </Card> */}
             </Col>
          </Row>
       </Container>
