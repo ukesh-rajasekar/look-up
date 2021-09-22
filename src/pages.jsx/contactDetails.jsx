@@ -4,7 +4,7 @@ import { Card, Row, Container, Col, ListGroup } from 'react-bootstrap';
 
 export default function ContactDetails(props) {
    const { selectedContact } = props;
-   const { name, username, email, phone, website } = selectedContact;
+   const { name, email, phone, website } = selectedContact;
    return (
       <Container fluid='md'>
          <Row className='justify-content-md-center'>

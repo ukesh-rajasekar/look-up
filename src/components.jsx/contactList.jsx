@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { useHistory } from 'react-router';
 import Avatar from 'react-avatar';
-import { Row, Container, Col, ListGroup, Image } from 'react-bootstrap';
+import { Row, Container, Col, ListGroup } from 'react-bootstrap';
 
 export default function ContactList(props) {
    const { input, ifClicked } = props;
@@ -43,8 +43,6 @@ export default function ContactList(props) {
       <Container fluid='md'>
          <Row className='justify-content-md-center'>
             <Col>
-               {/* <Card className=' text-center' bg={'dark'}>
-                  <Card.Body className='container'> */}
                <ListGroup variant='flush'>
                   {contacts
                      .filter((contact) => {
@@ -73,8 +71,6 @@ export default function ContactList(props) {
                         );
                      })}
                </ListGroup>
-               {/* </Card.Body>
-               </Card> */}
             </Col>
          </Row>
       </Container>
