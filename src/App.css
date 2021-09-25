@@ -43,6 +43,12 @@ body {
    cursor: pointer;
 }
 
+.footer {
+   text-align: center;
+   color: white;
+   cursor: pointer;
+}
+
 @media only Screen and (max-width: 750px) {
    body {
       margin: 0vh !important;

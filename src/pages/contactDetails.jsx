@@ -1,10 +1,14 @@
 import React from 'react';
 import Avatar from 'react-avatar';
+import arrow from '../left-arrow.png';
 import { Card, Row, Container, Col, ListGroup } from 'react-bootstrap';
+import { useHistory } from 'react-router';
 
 export default function ContactDetails(props) {
    const { selectedContact } = props;
    const { name, email, phone, website } = selectedContact;
+   const history = useHistory();
+
    return (
       <Container fluid='md'>
          <Row className='justify-content-md-center'>
@@ -37,6 +41,13 @@ export default function ContactDetails(props) {
                      </a>
                   </ListGroup.Item>
                </ListGroup>
+               <Card.Footer
+                  className='footer'
+                  onClick={() => history.push('/look-up')}
+               >
+                  <img style={{ width: '50px', height: '50px' }} src={arrow} />{' '}
+                  Contacts
+               </Card.Footer>
             </Col>
          </Row>
       </Container>

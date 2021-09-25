@@ -2,9 +2,9 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import ContactList from './components.jsx/contactList';
-import SearchBar from './components.jsx/searchBar';
-import ContactDetails from './pages.jsx/contactDetails';
+import ContactList from './components/contactList';
+import SearchBar from './components/searchBar';
+import ContactDetails from './pages/contactDetails';
 import { Card } from 'react-bootstrap';
 
 function App() {
